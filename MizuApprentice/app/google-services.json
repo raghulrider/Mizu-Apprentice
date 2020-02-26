@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "16882291536",
+    "firebase_url": "https://mizu-apprentice.firebaseio.com",
+    "project_id": "mizu-apprentice",
+    "storage_bucket": "mizu-apprentice.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16882291536:android:89614ce5cf0cf2b9d65255",
+        "android_client_info": {
+          "package_name": "com.raghulrider.mizuapprentice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16882291536-85va4qvjlks017io4ags3bt24hc3qag2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.raghulrider.mizuapprentice",
+            "certificate_hash": "1f0c52d450061b7e97906b1193a6ee086d255380"
+          }
+        },
+        {
+          "client_id": "16882291536-f2iv3t42vjqp28rs4rsfljfh943uqn86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBORQbZFrdNSME5jSRED4Etlwst3ny8-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16882291536-f2iv3t42vjqp28rs4rsfljfh943uqn86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Mizu Apprentice</string>
+    <string name="minimum_password">Password Length is Short</string>
+    <string name="auth_failed">Authentication Failed</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="maincontent">Welcome to Mizu Apprentice. I will go through all the contents in this page. The animated tank shows,
+    the amount of water left in tank, in percentage. First cardview represents, the amount of water left in tank, in litres. Second
+    cardview represents, the amount of water usage, per day. Third cardview represents, the cost estimation for the, per day usage. Finally,
+        the fourth cardview represents, what you can do with the amount of water left in the tank.
+        I, Mizu apprentice will always be at your service!   Happy Helping!</string>
+</resources>

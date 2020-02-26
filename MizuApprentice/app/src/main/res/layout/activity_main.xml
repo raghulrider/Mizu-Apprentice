@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:weightSum="2"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1">
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/waveLoadingView"
+            android:layout_width="wrap_content"
+            android:layout_margin="32dp"
+            android:layout_height="wrap_content"
+            app:wlv_borderColor="@color/colorPrimaryDark"
+            app:wlv_borderWidth="3dp"
+            app:wlv_progressValue="40"
+            app:wlv_shapeType="rectangle"
+            app:wlv_round_rectangle="true"
+            app:wlv_triangle_direction="north"
+            app:wlv_titleTopStrokeColor="@color/colorPrimaryDark"
+            app:wlv_titleTopStrokeWidth="3dp"
+            app:wlv_titleTop="Tank Level"
+            app:wlv_titleTopColor="@android:color/white"
+            app:wlv_titleTopSize="18sp"
+            app:wlv_titleBottomStrokeColor="@color/white"
+            app:wlv_titleBottomStrokeWidth="1dp"
+            app:wlv_titleBottom="- %"
+            app:wlv_titleBottomColor="@android:color/black"
+            app:wlv_titleBottomSize="14sp"
+            app:wlv_waveAmplitude="20"
+            app:wlv_waveColor="@color/colorAccent"
+            tools:ignore="DuplicateIds" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <GridLayout
+            android:id="@+id/mainGrid"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:layout_weight="8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="14dp"
+            >
+
+            <!-- Row 1 -->
+
+            <!-- Column 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                >
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:text="Tank Water(Litres)"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:id="@+id/waterlevel"
+                            android:text=" - "
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:background="@drawable/round_corner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Column 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:text="Water Usage Level(Litres)"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:id="@+id/waterusage"
+                            android:text=" - "
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:background="@drawable/round_corner"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- Row 2 -->
+
+            <!-- Column 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:text="Cost Estimation"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:text=" - "
+                            android:id="@+id/costestimation"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:background="@drawable/round_corner"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Column 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                app:cardElevation="8dp"
+                >
+
+                <LinearLayout
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:text="Can do"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:id="@+id/cando"
+                            android:text=" - "
+                            android:textAlignment="center"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:background="@drawable/round_corner"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>

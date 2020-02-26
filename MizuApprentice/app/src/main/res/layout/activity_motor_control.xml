@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:weightSum="2"
+    android:orientation="vertical"
+    android:divider="?android:dividerHorizontal"
+    android:showDividers="middle"
+    android:layout_height="match_parent"
+    tools:context=".MotorControl">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instant Control"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold">
+    </TextView>
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/motorControlToggle"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            app:checkedButton="@id/offBtn"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/offBtn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OFF"
+                app:icon="@drawable/motoroff" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/onBtn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ON"
+                app:icon="@drawable/motoron" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timer Control"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:layout_margin="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold">
+    </TextView>
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_weight="0.3"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="match_parent">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_margin="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/timerlimit"
+                    style="@style/LoginTextInputLayout"
+                    android:hint="Timer"
+                    android:inputType="number"
+                    ></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set Timer" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1.7"
+            android:gravity="bottom|center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginBottom="6dp"
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:text="Motor Status :"></TextView>
+            <TextView
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="3dp"
+                android:id="@+id/completionStatus"
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                android:background="@drawable/status_bg"
+                android:layout_height="wrap_content"
+                android:text="-"></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
